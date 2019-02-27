@@ -1,0 +1,60 @@
+{
+    "parser": "babel-eslint",
+    "plugins": ["react", "prettier", "jest"],
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "rules": {
+        "prettier/prettier": [
+            "warn",
+            {
+                "tabWidth": 4,
+                "printWidth": 80,
+                "semi": false,
+                "trailingComma": "es5",
+                "bracketSpacing": true,
+                "parser": "flow",
+                "singleQuote": true
+            }
+        ],
+        "no-console": "off",
+        "prefer-const": "error",
+        "no-useless-escape": "off",
+        "no-unused-vars": ["error", { "args": "none" }],
+        "react/jsx-indent-props": ["off", 4],
+        "react/jsx-indent": ["off", 4],
+        "react/jsx-filename-extension": [
+            "off",
+            { "extensions": [".js", ".jsx"] }
+        ],
+        "react/jsx-closing-bracket-location": ["off", { "when": "multiline" }],
+        "react/no-multi-comp": ["error", { "ignoreStateless": true }],
+        "react/jsx-first-prop-new-line": ["error", "multiline"]
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "prettier",
+        "prettier/react",
+        "prettier/standard"
+    ],
+    "settings": {
+        "react": {
+            "version": "16.0.0"
+        }
+    },
+    "globals": {
+        "graphql": true,
+        "__CONFIG__": true,
+        "__PUBLIC_PATH__": true,
+        "REDUX_DEV_TOOLS": true
+    },
+    "env": {
+        "shared-node-browser": true,
+        "jest/globals": true,
+        "commonjs": true,
+        "node": true,
+        "es6": true,
+        "browser": true
+    }
+}
